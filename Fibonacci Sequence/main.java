@@ -33,7 +33,8 @@ class Fibonacci_Sequence {
         int A = Validator.getA();
         int B = Validator.getB();
         int beforeA = Validator.getA();
-        
+        resultSequenceA = Arrays.copyOf(resultSequenceA, resultSequenceA.length + 1);
+        resultSequenceA[resultSequenceA.length - 1] = A;
         /** Start the algorithm to calculate fibonacci sequence using golden ratio */
         for(int i = 0; i < amount; i++){
             resultSequenceA = Arrays.copyOf(resultSequenceA, resultSequenceA.length + 1);
@@ -49,18 +50,19 @@ class Fibonacci_Sequence {
             beforeA = A;
             resultSequenceB[resultSequenceB.length - 1] = B;
 
-            System.out.println("");
-            System.out.println(A);
-            System.out.println(B);
+            //System.out.println("");
+            //System.out.println(A);
+            //System.out.println(B);
             
         }
 
         /**
-         * resultSequenceA returns array list of all A numbers
-         * resultSequenceB returns array list of all B numbers
-         * resultBA returns array list of all A/B numbers
+         * resultSequenceA returns array list of all A numbers - format: Arrays.toString(resultSequenceA)
+         * resultSequenceB returns array list of all B numbers - format: Arrays.toString(resultSequenceB)
+         * resultBA returns array list of all A/B numbers - format: Arrays.toString(resultBA)
          */
 
+         System.out.println(Arrays.toString(resultBA));
         
     }
     
